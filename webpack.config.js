@@ -8,6 +8,11 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: './index.html', to: './' }
+    ])
+  ],
   module: {
     rules: [
       {
